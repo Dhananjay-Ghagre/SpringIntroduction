@@ -2,6 +2,7 @@ package com.springIntro.restAPI.Controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,9 @@ public class APIController {
         return "Hello "+mark+" from Bridgelabz";
     }
 
+    @GetMapping("/hello/param/{name}")
+    public String hello(@PathVariable String name) {
+        return "Hello "+name+" from Bridgelabz";
+    }
 
 }
